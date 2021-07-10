@@ -5,7 +5,5 @@ var express = require('express');
      return res.send(req.ip)
  });
  // chỉnh port
- app.listen(3000, function () {
-     console.log('Node app is running on port 3000');
- });
- module.exports = app;
+const port = process.env.PORT
+app.listen(port, ()=>console.log('Server started on Port `${port}`))
