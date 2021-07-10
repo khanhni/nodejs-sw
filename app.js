@@ -6,4 +6,4 @@ var express = require('express');
  });
  // chỉnh port
 const port = process.env.PORT
-app.listen(port, ()=>console.log('Server started on Port `${port}`))
+app.listen(port, ()=>console.log(`Server started ${port}`));
