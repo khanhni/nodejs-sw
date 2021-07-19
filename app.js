@@ -1,9 +1,7 @@
 var express = require('express');
  var app = express();
  // route mặc định
- app.get('/', function (req, res) {
-     return res.send(req.ip)
- });
- // chỉnh port
-const port = process.env.PORT
+ app.use('/',express.static("./build") )  // chỉnh port
+const port = process.env.PORT || 4000
+
 app.listen(port, ()=>console.log(`Server started ${port}`));
